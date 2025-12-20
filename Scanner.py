@@ -12,7 +12,7 @@ def scan_target(target: str):
         print("[-] Invalid target. Scan aborted.")
         return None
 
-    nmap_arguments = "-Pn -p 1-1024 -T4 --max-retries 2 --host-timeout 30s"
+    nmap_arguments = "-Pn -p 1-1024 -sV --version-intensity 5 -T4 --max-retries 2 --host-timeout 60s"
     print(f"[*] Starting scan for {target}")
 
     try:

@@ -1,14 +1,24 @@
-import json # Imports the built-in json module to format output as JSON.
-from Scanner import scan_target # Imports the scan_target function from (Scanner.py).
+import json
+from datetime import datetime
+from config import RESULTS_DIR
+from scanner.nmap_scanner import NmapScanner
+from scanner.result_formatter import format_results
 
 def main():
-    target = input("Enter IP / CIDR / range / domain: ").strip()
-    output = scan_target(target)
+    target = input("Target (IP / CIDR / Range / Domain): ").strip()
+    scan_level = int(input("Scan Type (1=Quick, 2=Medium, 3=Deep): "))
 
-    if output:
-        print(json.dumps(output, indent=4)) # Converts Python dictionary → formatted JSON output.
-    else:
-        print("[-] No scan results returned.") # Handles empty or failed scans.
-# Ensures the script only runs when executed directly (not imported)
+    scanner = NmapScanner()
+    nm, nm_args = scanner.scan(target, scan_level)
+    results = format_results(nm, target, nm_args)
+
+    filename = f"scan_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    filepath = RESULTS_DIR / filename
+
+    with open(filepath, "w") as f:
+        json.dump(results, f, indent=4)
+
+    print(f"[+] Scan completed. Results saved to {filepath}")
+
 if __name__ == "__main__":
     main()

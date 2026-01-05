@@ -1,6 +1,17 @@
----
-
 ## Layer 1: Discovery & Port Scanning
+---
+### For the attention of readers
+>   This document explains how to set up, configure, and run **Layer 1: Discovery & Port Scanning**.
+It is intended for developers who want to run the project locally, understand integrations, or extend intelligence sources.
+
+## Pre — requesites
+- OS (Windows / Linux Ubuntu)
+- Python software, and pip installation manager [Install Python]()
+- VS Code (Visual Studio Code) [Install VS Code]()
+- Internet Connection
+- Git
+
+---
 
 ### High-Level Overview
 
@@ -53,6 +64,27 @@ project_root/
 
 ---
 
+## Set up
+1. Clone the repo, and get inside it
+    ```
+        Updated soon
+    ```
+2. [Virtual Environment Setup](CreateVirtualEnv.md)
+3. Install all the libraries and packages inside the virtual environment. 
+    ```bash
+    > pip install -r requirements.txt
+    ```
+4. API setup<br>
+    Updated Soon
+5. Run the code:
+    ```
+        Updated soon
+
+    ```
+6. [Output Architecture: Updated Soon]()<br>
+7. [Troubleshooting]()
+
+---
 ## Execution Flow
 
 1. **Target Input**

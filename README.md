@@ -13,6 +13,39 @@ This repository currently documents **Layer 1: Discovery & Port Scanning**, whic
 
 ---
 
+## Layer 1: Discovery & Port Scanning
+
+### High-Level Overview
+
+Layer 1 is responsible for initial reconnaissance and data collection. Its primary objectives include:
+
+- Accepting scan targets such as:
+  - Single IP address  
+  - CIDR block  
+  - IP range  
+  - Domain name  
+- Performing network discovery using **Nmap**
+- Identifying:
+  - Live hosts
+  - Open ports
+  - Running services and service versions
+- Enriching discovered services with known vulnerability data (CVE) using:
+  - NVD (National Vulnerability Database)
+  - Vulnerability intelligence APIs (e.g., Vulners)
+- Storing scan results in a **structured JSON format**
+
+The output of this layer is consumed by later components for:
+- Risk scoring
+- Threat correlation
+- Reporting and dashboards
+______
+
+## Setup and Run the Layer 1: 
+[Click Here](Documentation/README.md) to see the developer documentation. 
+
+---
+
+
 ## Summary
 
 Layer 1 establishes the **discovery and data collection foundation** of the Cyber Risk Assessment & Threat Intelligence Platform. By combining network scanning with vulnerability intelligence and structured data storage, this layer enables:

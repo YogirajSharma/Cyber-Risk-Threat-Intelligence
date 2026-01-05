@@ -42,9 +42,9 @@ The output of this layer is consumed by later components for:
 ---
 
 ## Project Structure
+'''
 The project follows a modular architecture to ensure scalability,
 maintainability, and easy integration with future risk analysis layers.
-'''
     project_root/
     │
     ├── main.py # Application entry point

@@ -42,30 +42,29 @@ The output of this layer is consumed by later components for:
 ---
 
 ## Project Structure
-## Repository Structure
-
 The project follows a modular architecture to ensure scalability,
 maintainability, and easy integration with future risk analysis layers.
-
-project_root/
-│
-├── main.py # Application entry point
-├── constants.py # Global constants and enums
-├── config.py # Configuration & API keys
-│
-├── scanner/ # Network discovery & scanning logic
-│ ├── nmap_scanner.py # Nmap-based port & service scanning
-│ ├── target_detection.py# Target validation (IP, CIDR, domain)
-│ └── result_formatter.py# Normalizes scan output
-│
-├── cve/ # Vulnerability intelligence
-│ └── nvd_client.py # CVE lookup via NVD/Vulners APIs
-│
-├── utils/ # Shared utilities
-│ └── logger.py # Centralized logging
-│
-└── results/ # Scan output storage
-└── scan_YYYYMMDD_HHMMSS.json
+'''
+    project_root/
+    │
+    ├── main.py # Application entry point
+    ├── constants.py # Global constants and enums
+    ├── config.py # Configuration & API keys
+    │
+    ├── scanner/ # Network discovery & scanning logic
+    │ ├── nmap_scanner.py # Nmap-based port & service scanning
+    │ ├── target_detection.py# Target validation (IP, CIDR, domain)
+    │ └── result_formatter.py# Normalizes scan output
+    │
+    ├── cve/ # Vulnerability intelligence
+    │ └── nvd_client.py # CVE lookup via NVD/Vulners APIs
+    │
+    ├── utils/ # Shared utilities
+    │ └── logger.py # Centralized logging
+    │
+    └── results/ # Scan output storage
+    └── scan_YYYYMMDD_HHMMSS.json
+'''
 
 ---
 
